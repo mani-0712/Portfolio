@@ -15,7 +15,7 @@
     --bg-color: #000000;
     --second-bg-color: #161616;
     --text-color: #ffffff;
-    --main-color: #04cdff;
+    --main-color: #ff3604;
 }
 
 html {
@@ -396,4 +396,89 @@ span {
         width: 100%;
     }
     
+}
+
+/* section education */
+
+.education {
+    background: var(--bg-color);
+}
+.education .timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.education .timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: rgb(90,64,64);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -2px;
+}
+.education .container{
+    padding: 10px 40px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+.education .container::after{
+    content: '\f501';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    right: -17px;
+    background-color: rgb(252,252,252);
+    bottom: 4px solid var(--main-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 100;
+    font-size: 1.89rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+    color: rgb(90,64,64);
+}
+.education .left {
+    left: 0;
+}
+.education .rigth {
+    left: 50%;
+}
+.education .left::before{
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--main-color);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--main-color);
+}
+.education .rigth::before{
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--main-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--main-color) transparent transparent;
+}
+.education .rigth::after{
+    left: -16px;
+}
+.education .content{
+    padding: 20px;
+    background: var(--main-color);
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
